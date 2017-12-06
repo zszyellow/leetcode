@@ -1,14 +1,19 @@
 class TrieNode
 {
-    
 public:
     bool is_word;
-    TrieNode* children[26];
+    vector<TrieNode*> children;
 
     TrieNode(bool is_word = false)
     {
         this->is_word = is_word;
-        memset(children, 0, sizeof(children));
+        children.resize(26);
+    }
+    
+    ~TrieNode()
+    {
+        for (auto child : children)
+            free(child);
     }
 };
 
