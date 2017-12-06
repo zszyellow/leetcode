@@ -13,7 +13,7 @@ public:
     ~TrieNode()
     {
         for (auto child : children)
-            free(child);
+            delete child;
     }
 };
 
