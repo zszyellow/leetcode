@@ -18,7 +18,7 @@ public:
       res = p->right;
       while(res->left != NULL) res = res->left;
       return res;
-    } 
+    }
     else {
       while (node != NULL) {
         if(node == p) break;
@@ -29,7 +29,7 @@ public:
         else node = node->right;
       }
     }
- 
+
     return res;
   }
 };
