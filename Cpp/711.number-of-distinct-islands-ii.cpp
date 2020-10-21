@@ -36,6 +36,7 @@ public:
         return *min_element(s.begin(), s.end());
     }
     
+    /* TC: O(M*Nlog(M*N)) SC: O(M*N) */
     int numDistinctIslands2(vector<vector<int>>& grid) {
         if (grid.empty() || grid[0].empty()) return 0;
         int m = grid.size(), n = grid[0].size();
