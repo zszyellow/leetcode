@@ -11,13 +11,14 @@
  */
 class Solution {
 public:
-    bool isUnivalTree(TreeNode* root) {
-        if (root == nullptr) return true;
-        else return dfs(root, root->val);
+    bool isBalanced(TreeNode* root) {
+        if (!root) return true;
+        int left = depth(root->left), right = depth(root->right);
+        return abs(left-right) <= 1 && isBalanced(root->left) && isBalanced(root->right);
     }
     
-    bool dfs(TreeNode *node, int val) {
-        if (node == nullptr) return true;
-        else return node->val == val && dfs(node->left, val) && dfs(node->right, val);
+    int depth(TreeNode* root) {
+        if (!root) return 0;
+        return max(depth(root->left), depth(root->right))+1;
     }
 };
