@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    int minDiffInBST(TreeNode* root) {
+    int getMinimumDifference(TreeNode* root) {
         int prev = INT_MAX, res = INT_MAX;
         inorder(root, prev, res);
         return res;
