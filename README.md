@@ -1,4 +1,4 @@
 leetcode
 ========
 
-leetcode solutions written in python & JavaScript & Cpp by zszyellow.
+leetcode solutions written in Cpp & Rust by zszyellow.
